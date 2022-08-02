@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./images/background.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Amatic SC", cursive;
+  overflow-y: hidden;
+}
+
+.main-heading {
+  font-size: 80px;
+  font-weight: 700;
+  text-align: center;
+  padding: 15px 10px 50px 10px;
+}
+
+.main-heading img {
+  height: 80px;
+  padding: 0px 0px 0px 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .main-heading img {
+    display: none;
+  }
+}
+
+.App {
+  background-color: transparent;
+  margin: 100px auto;
+  height: 80vh;
+  width: 70vw;
+  max-width: 700px;
+  border-radius: 6px;
+}
+
+.todo-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .todo-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.todo-form input {
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  width: 70%;
+  height: 40px;
+  padding: 0px 10px;
+  border: none;
+  border-bottom: 1px solid rgb(59, 59, 59);
+  color: black;
+}
+
+@media screen and (max-width: 1670px) {
+  .todo-form input {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .todo-form input {
+    width: 100%;
+  }
+}
+
+.todo-form button {
+  background-color: transparent;
+  border: none;
+  border-radius: 10%;
+  color: green;
+  margin: 0px 10px;
+  font-weight: 700;
+  font-size: 33px;
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+@media screen and (max-width: 800px) {
+  .todo-form button {
+    display: none;
+  }
+}
+
+.todo-form button:hover {
+  background-color: green;
+  color: white;
+}
+
+.filter-todo {
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  font-size: 25px;
+  background-color: transparent;
+  height: 40px;
+  width: 140px;
+  border: none;
+  border-bottom: 1px solid rgb(59, 59, 59);
+}
+
+.todo-container {
+  height: 80%;
+  overflow-y: auto;
+}
+
+.todo {
+  height: 90%;
+  width: 98%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 1670px) {
+  .todo {
+    width: 70%;
+  }
+}
+
+.todo button {
+  margin: 0px 3px;
+  transition: transform 0.25s ease;
+}
+
+.todo button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.item-check {
+  border-right: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 0.2em;
+  background-color: transparent;
+}
+
+.item-delete {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 0.2em;
+  border: none;
+}
+
+.item-delete img {
+  height: 27px;
+  background: transparent;
+}
+
+.item-check img {
+  height: 30px;
+  background: transparent;
+}
+
+.todo-item {
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  font-size: 32px;
+  padding: 0px 3px;
+  margin: 0px 10px 0px 0px;
+  flex: 2;
+  border-bottom: 1px solid rgb(59, 59, 59);
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+}
+
+.checked {
+  text-decoration: line-through;
+  text-decoration-color: rgb(110, 110, 110);
+  color: rgb(110, 110, 110);
+  font-size: 32px;
+  padding: 0px 3px;
+  margin: 0px 10px 0px 0px;
+  flex: 2;
+  border-bottom: 1px solid rgb(59, 59, 59);
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+}
